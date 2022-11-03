@@ -1,0 +1,98 @@
+:root {
+    --body-color:#212532;
+    --card-color:#313A49;
+    --highlights:#54FFAB;
+    --advice:'Manrope', sans-serif;
+    --text-color:#4d586a;
+
+}
+
+* {
+    margin:0;
+    padding:0;
+    font-size:1em;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: var(--body-color);
+    font-size:100%;
+    font-family: var(--advice);
+    font-weight: 800;
+}
+
+
+footer a {
+    color: var(--highlights);
+
+}
+
+main, footer {
+    padding-block:3rem;
+}
+
+footer .attribution {
+    text-transform: uppercase;
+    font-size:.9rem;
+    letter-spacing: 3px;
+    color:var(--text-color)
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding:0rem;
+    flex-direction: column;
+    height:100vh;
+}
+
+.card {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width:60vw;
+    min-height:450px;
+    margin:0 auto 3rem;
+    border-radius: 50px;
+    background-color: var(--card-color);
+    position: relative;
+    color:white;
+    text-align: center;
+    padding-inline:12rem;
+}
+
+.advice-id {
+    text-transform: uppercase;
+    padding-block: 0 6rem;
+    letter-spacing: 4px;
+    color: var(--highlights);
+}
+
+.advice-text {
+    font-size:3rem;
+    padding-block: 0 9rem;
+}
+
+
+
+.cta-change-advice {
+    background-color: var(--highlights);
+    background-image: url('images/icon-dice.svg');
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 40%;
+    text-indent:9999px;
+    overflow-x:hidden;
+    white-space: nowrap;
+    width:100px;
+    height:100px;
+    border-radius: 100%;
+    position: absolute;
+    bottom:-50px;
+    left:50%;
+    margin-left:-50px;
+    cursor: pointer;
+
+}
