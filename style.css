@@ -2,8 +2,11 @@
     --body-color:#212532;
     --card-color:#313A49;
     --highlights:#54FFAB;
+    --credits:#3cc683;
     --advice:'Manrope', sans-serif;
     --text-color:#4d586a;
+    --card-text-col:#CFE3E8;
+
 
 }
 
@@ -24,6 +27,12 @@ body{
 
 
 footer a {
+    color: var(--credits);
+    display: block;
+
+}
+
+footer a:hover {
     color: var(--highlights);
 
 }
@@ -51,28 +60,34 @@ footer .attribution {
 .card {
     display:flex;
     flex-direction: column;
-    justify-content: center;
-    width:60vw;
+    width:90%;
     min-height:450px;
     margin:0 auto 3rem;
-    border-radius: 50px;
+    border-radius: 25px;
     background-color: var(--card-color);
     position: relative;
-    color:white;
+    color:var(--card-text-col);
     text-align: center;
-    padding-inline:12rem;
+    padding-inline: 2em;
+    padding-block: 2rem;
 }
 
 .advice-id {
     text-transform: uppercase;
-    padding-block: 0 6rem;
+    padding-block: 1rem 6rem;
     letter-spacing: 4px;
     color: var(--highlights);
 }
 
 .advice-text {
-    font-size:3rem;
-    padding-block: 0 9rem;
+    font-size:2rem;
+    padding-block: 0 2rem;
+    background-image: url('images/pattern-divider-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 100%;
+    padding-block:0 4rem;
+
 }
 
 
@@ -89,10 +104,91 @@ footer .attribution {
     width:100px;
     height:100px;
     border-radius: 100%;
+    border:none;
     position: absolute;
     bottom:-50px;
     left:50%;
     margin-left:-50px;
     cursor: pointer;
+    
+
+}
+
+footer span {
+    display: block;
+    padding-block:.25rem;
+}
+
+.cta-change-advice:hover {
+    box-shadow: 0 0 40px var(--highlights);
+}
+
+
+@media only screen and (min-width:768px) {
+
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+        height:100vh;
+    }
+    
+    .card {
+        width:40vw;
+        min-height:300px;
+        margin:0 auto;
+        padding-inline:3rem;
+
+    }
+
+
+    .advice-id {
+        text-transform: uppercase;
+        padding-block: 0 3rem;
+        letter-spacing: 4px;
+        color: var(--highlights);
+        font-weight: 300;
+        font-size:.8rem;
+    }
+
+    .advice-text {
+        font-size:1.5rem;
+        background-image: url('images/pattern-divider-desktop.svg');
+        background-repeat: no-repeat;
+        padding-block:0 3rem
+    
+    }
+
+    blockquote i {
+        font-size:1rem;
+    }
+
+    .cta-change-advice {
+        width:72px;
+        height:72px;
+        bottom:-36px;
+        margin-left:-36px;
+        
+        
+    
+    }
+
+    footer {
+        padding-block:3rem 0;
+    }
+
+    footer span, footer a {
+        display: inline-block;
+        padding-block:.25rem;
+    }
+
+    footer span {
+        padding-inline:1rem;
+    }
+
+
+    
 
 }
