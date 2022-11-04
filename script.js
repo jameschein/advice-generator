@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let advice = ['My advice to you at last in the day!','My advice to you Rudy.', 'Once upon a word of wisdom we flew high']
 
-    let randomNum = 0
-
     const die = document.querySelector('.cta-change-advice')
 
     const actualAdvice = document.querySelector('.actual-advice')
@@ -11,20 +9,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const adviceNum = document.querySelector('.advice-num')
 
     const generateNum = () => {
-        return Math.random()
+        
+        return Math.floor(Math.random() * advice.length)
         
     } 
     
     die.addEventListener('click', (e)=>{
 
-        randomNum = Math.floor(generateNum() * advice.length)
-        
+        randomNum = generateNum()
+
+        while(randomNum === counter){
+            randomNum = generateNum()
+        }
+
         actualAdvice.innerHTML = advice[randomNum]
-        adviceNum.innerHTML = randomNum + 1
+        adviceNum.innerHTML = randomNum+1 
+        
+        counter = randomNum 
+        
+        
     })
     
     
-    randomNum = Math.floor(generateNum() * advice.length)
+    // RANDO NUMBER AND ADVICE ON PAGE LOAD
+    
+    let randomNum = generateNum()
+
+    let counter = randomNum
         
     actualAdvice.innerHTML = advice[randomNum]
     adviceNum.innerHTML = randomNum + 1
