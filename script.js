@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Fetch Request Function
     const fetchReq = () => {
+        
         fetch('https://api.adviceslip.com/advice')
             .then(function (response) {
               return response.json();
@@ -43,10 +44,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     
     
-    die.addEventListener('click', (e)=>{
-
+    die.addEventListener('click', ()=>{
+        
         adviceData = fetchReq()
-        appendData(adviceData);
+    
 
 
 
@@ -69,7 +70,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // RANDO NUMBER AND ADVICE ON PAGE LOAD
     adviceData = fetchReq();
-    appendData(adviceData);
 
 
         
