@@ -86,7 +86,7 @@ main {
 }
 
 .advice-container {
-    height:130px;
+    height:150px;
     margin-block: 0 4.5rem;
 }
 
@@ -99,6 +99,16 @@ main {
     background-repeat: no-repeat;
     background-position: 50% 100%;
     background-size: 100%;
+}
+
+.advice-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size:1.5rem;
+    height:inherit;
+
 }
 
 .actual-advice:before {
@@ -206,15 +216,7 @@ footer span {
     }
 
 
-    .advice-text {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        font-size:1.5rem;
-        height:inherit;
-    
-    }
+  
 
     .actual-advice {
         padding-inline: 3rem;
