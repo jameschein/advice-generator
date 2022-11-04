@@ -18,6 +18,8 @@
   </style>
 
   <script src="https://kit.fontawesome.com/98fc27b2a0.js" crossorigin="anonymous"></script>
+
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -26,10 +28,16 @@
     <main>
       <div class="card">
         
-        <h1 class="advice-id">
+         <h1 class="advice-id">
           Advice #<span><!-- Advice ID goes here --></span></h1>
         
-         <blockquote class="advice-text"><i class="fa-solid fa-quote-left"></i>My advice to you at last in the day!<!-- Advice text goes here --><i class="fa-solid fa-quote-right"></i></blockquote>
+         <div class="advice-container">
+          
+          <blockquote class="advice-text">
+            <p class="actual-advice">My advice to you at last in the day!<!-- Advice text goes here --></p>
+          </blockquote>
+        
+        </div>
 
 
         <button class="cta-change-advice">Roll the advice die</button>

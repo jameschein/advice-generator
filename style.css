@@ -48,7 +48,7 @@ footer .attribution {
     color:var(--text-color)
 }
 
-.wrapper {
+main {
     display: flex;
     justify-content: center;
     align-items:center;
@@ -81,15 +81,41 @@ footer .attribution {
 
 .advice-text {
     font-size:2rem;
-    padding-block: 0 2rem;
-    background-image: url('images/pattern-divider-mobile.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 100%;
-    background-size: 100%;
     padding-block:0 4rem;
 
 }
 
+.advice-container:after {
+    content:'';
+    display: block;
+    width:100%;
+    height:3rem;
+    background-image: url('images/pattern-divider-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 100%;
+}
+
+.actual-advice:before {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f10d";
+    font-size:.9rem;
+    position: relative;
+    top:-12px;
+    padding-inline: 0 5px;
+}
+
+.actual-advice:after {
+    font-family: "Font Awesome 5 Free"; 
+    font-weight: 900; 
+    content: "\f10e";
+    font-size:.9rem;
+    padding-block:0 0rem;
+    position: relative;
+    top:-12px;
+    padding-inline-start: 5px;
+}
 
 
 .cta-change-advice {
@@ -98,20 +124,23 @@ footer .attribution {
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 40%;
+    
     text-indent:9999px;
     overflow-x:hidden;
     white-space: nowrap;
+    
     width:100px;
     height:100px;
+    
     border-radius: 100%;
     border:none;
+    
     position: absolute;
     bottom:-50px;
     left:50%;
     margin-left:-50px;
-    cursor: pointer;
     
-
+    cursor: pointer;
 }
 
 footer span {
@@ -123,16 +152,20 @@ footer span {
     box-shadow: 0 0 40px var(--highlights);
 }
 
+.cta-change-advice:active {
+    box-shadow: 0 0 100px var(--highlights);
+}
+
 
 @media only screen and (min-width:768px) {
 
 
-    .wrapper {
+    main {
         display: flex;
         justify-content: center;
         align-items:center;
         flex-direction: column;
-        height:100vh;
+        height:80vh;
     }
     
     .card {
@@ -153,30 +186,66 @@ footer span {
         font-size:.8rem;
     }
 
-    .advice-text {
-        font-size:1.5rem;
+
+    .advice-container {
+        height:130px;
+        margin-block: 0 4.5rem;
+    }
+
+    .advice-container:after {
+        content:'';
+        display: block;
+        width:100%;
+        height:1rem;
         background-image: url('images/pattern-divider-desktop.svg');
         background-repeat: no-repeat;
-        padding-block:0 3rem
+        background-position: 50% 100%;
+        background-size: 100%;
+    }
+
+
+    .advice-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size:1.5rem;
+        height:inherit;
     
     }
 
-    blockquote i {
-        font-size:1rem;
+    .actual-advice {
+        padding-inline: 3rem;
     }
+
+
+    .actual-advice:before {
+        font-size:.8rem;
+        top:-5px;
+    }
+    
+    .actual-advice:after {
+        font-size:.8rem;
+        top:-5px;
+       
+    }
+
+
 
     .cta-change-advice {
         width:72px;
         height:72px;
         bottom:-36px;
         margin-left:-36px;
-        
-        
-    
     }
 
+    
+    
+
+
+
     footer {
-        padding-block:3rem 0;
+        padding-block:3rem 2rem;
     }
 
     footer span, footer a {
