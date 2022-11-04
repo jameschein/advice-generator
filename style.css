@@ -85,11 +85,16 @@ main {
 
 }
 
+.advice-container {
+    height:130px;
+    margin-block: 0 4.5rem;
+}
+
 .advice-container:after {
     content:'';
     display: block;
     width:100%;
-    height:3rem;
+    height:1.5rem;
     background-image: url('images/pattern-divider-mobile.svg');
     background-repeat: no-repeat;
     background-position: 50% 100%;
@@ -187,10 +192,7 @@ footer span {
     }
 
 
-    .advice-container {
-        height:130px;
-        margin-block: 0 4.5rem;
-    }
+    
 
     .advice-container:after {
         content:'';
